@@ -10,7 +10,7 @@ const Stack = createNativeStackNavigator();
 const Navigation = () => {
     return(
         <NavigationContainer>
-            <Stack.Navigator>
+            <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name='Home' component={Home} />
                 <Stack.Screen name='Add' component={Add} />
                 <Stack.Screen name='Edit' component={Edit} />
@@ -21,4 +21,3 @@ const Navigation = () => {
 
 export default Navigation;
 
-//test

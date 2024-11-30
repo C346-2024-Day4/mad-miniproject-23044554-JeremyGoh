@@ -1,15 +1,37 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View, Image, SectionList, Button, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Image, SectionList, TouchableOpacity, Alert } from 'react-native';
 import { datasource } from './Data.js';
 
 const renderSection = ({ section }) => (
-    <View style={[styles.headerContainer, { backgroundColor: section.bgcolor }]}>
+    <View style={[styles.headerContainer, { backgroundColor: section.bgcolor }]} >
         <Text style={styles.headerText}>{section.title}</Text>
     </View>
 );
 
 const Home = ({ navigation }) => {
+
+    const calculateTotalCookingTime = () => {
+        let total = 0;
+        datasource.forEach(section => {
+            section.data.forEach(item => {
+                const time = parseInt(item.cookingTime, 10);
+                if (!isNaN(time)) {
+                    total += time;
+                }
+            });
+        });
+
+        const hours = Math.floor(total / 60);
+        const minutes = total % 60;
+
+        Alert.alert(
+            "Total Cooking Time",
+            `The total cooking time for all recipes is ${hours} hours and ${minutes} minutes.`,
+            [{ text: "OK" }]
+        );
+    };
+
     const renderItem = ({ item, index, section }) => (
         <TouchableOpacity
             style={styles.itemContainer}
@@ -40,10 +62,22 @@ const Home = ({ navigation }) => {
                 sections={datasource}
                 renderItem={renderItem}
                 renderSectionHeader={renderSection}
+                contentContainerStyle={{ paddingBottom: 150 }}
             />
-            <View style={styles.buttonContainer}>
-                <Button title="Add Item" onPress={() => navigation.navigate("Add")} color="black" />
-            </View>
+            {/* Add Item Button */}
+            <TouchableOpacity
+                style={[styles.buttonContainer, { bottom: 80 }]}
+                onPress={() => navigation.navigate("Add")}
+            >
+                <Text style={styles.buttonText}>Add Item</Text>
+            </TouchableOpacity>
+            {/* Calculate Total Cooking Time Button */}
+            <TouchableOpacity
+                style={[styles.buttonContainer, { bottom: 20 }]}
+                onPress={calculateTotalCookingTime}
+            >
+                <Text style={styles.buttonText}>Calculate Total Cooking Time</Text>
+            </TouchableOpacity>
         </View>
     );
 };
@@ -51,68 +85,71 @@ const Home = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#121212',  // Dark background
+        backgroundColor: '#F5EBE0', // Light cream background
+        paddingTop: 30,
     },
     buttonContainer: {
         position: 'absolute',
-        bottom: 20,
         left: 20,
         right: 20,
-        backgroundColor: '#333',  // Dark button background
+        backgroundColor: '#B98B57', // Muted gold button background
         borderRadius: 14,
+        paddingVertical: 15,
+        alignItems: 'center',
+        justifyContent: 'center',
         shadowColor: '#000',
-        shadowOffset: { width: 0, height: 3 },
-        shadowOpacity: 0.2,
-        shadowRadius: 5,
+        shadowOffset: { width: 0, height: 5 },
+        shadowOpacity: 0.3,
+        shadowRadius: 10,
         elevation: 5,
-        padding: 10,
+        zIndex: 1,
+    },
+    buttonText: {
+        fontSize: 18,
+        fontWeight: '600',
+        color: '#F5EBE0', // Light cream text for contrast
+        textTransform: 'uppercase',
     },
     itemContainer: {
         flexDirection: 'row',
-        backgroundColor: '#1F1F1F',  // Dark item background
+        backgroundColor: '#F5EBE0', // Light cream background for items
         margin: 15,
         borderRadius: 15,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 5 },
-        shadowOpacity: 0.2,
+        shadowOpacity: 0.3,
         shadowRadius: 10,
         elevation: 6,
+        padding: 10, // Adding padding for spacing
     },
     imageStyle: {
         width: 120,
         height: 120,
         borderRadius: 15,
-        resizeMode: 'cover',
+        resizeMode: 'cover', // Ensures image is scaled without distortion
+        marginRight: 15, // Adds spacing between the image and text
     },
     textContainer: {
         flex: 1,
-        paddingLeft: 15,
-        paddingVertical: 10,
-        justifyContent: 'space-between',
+        justifyContent: 'center', // Ensures the text is vertically centered
     },
     textStyle: {
         fontSize: 20,
         fontWeight: '700',
-        color: '#ffffff',
-        letterSpacing: 1.2,
+        color: '#4F4A43', // Muted dark brown text for item titles
         textTransform: 'uppercase',
         marginBottom: 8,
     },
     ingredientsStyle: {
-        fontSize: 14,
-        color: '#b0b0b0',
+        fontSize: 16,
+        color: '#B98B57', // Muted gold for ingredient text
         marginBottom: 8,
     },
     cookingTimeStyle: {
-        fontSize: 12,
-        color: '#aaa',
+        fontSize: 14,
+        fontStyle: 'italic',
+        color: '#B98B57', // Muted gold for cooking time
         marginBottom: 10,
-    },
-    priceStyle: {
-        fontSize: 18,
-        fontWeight: '700',
-        color: '#e74c3c',
-        textTransform: 'uppercase',
     },
     headerContainer: {
         padding: 25,
@@ -120,6 +157,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
         marginTop: 20,
         marginBottom: 10,
+        backgroundColor: '#B98B57', // Muted gold for header background
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 5 },
         shadowOpacity: 0.3,
@@ -129,17 +167,15 @@ const styles = StyleSheet.create({
     headerText: {
         fontSize: 28,
         fontWeight: '800',
-        color: '#ffffff',
+        color: '#F5EBE0', // Light cream text for header
         textAlign: 'center',
-        letterSpacing: 3,
         textTransform: 'uppercase',
-        textShadowColor: 'rgba(0, 0, 0, 0.2)',  // Subtle shadow for text
+        textShadowColor: 'rgba(0, 0, 0, 0.2)',
         textShadowOffset: { width: 1, height: 1 },
         textShadowRadius: 6,
-        padding: 10,  // Padding around text for spacing
+        padding: 10,
     },
 });
 
 export default Home;
 
-//test

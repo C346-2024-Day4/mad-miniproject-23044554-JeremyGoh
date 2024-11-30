@@ -8,6 +8,7 @@ export const datasource = [
                 ingredients: 'Flour, eggs, milk, sugar, butter, syrup, berries',
                 cookingTime: 15,
             },
+
             {
                 key: 'Omelette',
                 image: 'https://www.thespruceeats.com/thmb/jE-PesfSjhsGS3CFBXIQNu_1tqo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/dinner-omelet-480277-hero-01-84a5af20b08440598a2b5b662f2e5cbe.jpg',
@@ -20,8 +21,14 @@ export const datasource = [
                 ingredients: 'Bananas, berries, yogurt, granola, honey',
                 cookingTime: 5,
             },
+            {
+                key: 'Bagel',
+                image:'https://grilledcheesesocial.com/wp-content/uploads/2024/04/bagel-breakfast-sandwich-recipe-9.jpg',
+                ingredients: 'Bagels, eggs, bacon, hot sauce, cheese',
+                cookingTime: 5,
+            },
         ],
-        bgcolor: "#789DBC",
+        bgcolor: "#B98B57",
     },
     {
         title: "Lunch Recipes",
@@ -44,8 +51,14 @@ export const datasource = [
                 ingredients: 'Spaghetti, prawn, garlic, olive oil',
                 cookingTime: 30,
             },
+            {
+                key: 'Chicken Wrap',
+                image: 'https://tastesbetterfromscratch.com/wp-content/uploads/2020/03/Buffalo-Chicken-Wrap-3.jpg',
+                ingredients: 'Grilled chicken, tortilla, lettuce, tomato, ranch dressing',
+                cookingTime: 20,
+            },
         ],
-        bgcolor: "#D1E7DD",
+        bgcolor: "#B98B57",
     },
     {
         title: "Dinner Recipes",
@@ -68,9 +81,15 @@ export const datasource = [
                 ingredients: 'Broccoli, bell peppers, carrots, soy sauce, garlic, ginger',
                 cookingTime: 30,
             },
+            {
+                key: 'Pepperoni Pizza',
+                image: 'https://www.simplyrecipes.com/thmb/KE6iMblr3R2Db6oE8HdyVsFSj2A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-pepperoni-pizza-lead-3-1024x682-583b275444104ef189d693a64df625da.jpg',
+                ingredients: 'Pizza Dough, tomato sauce, Mozzarella cheese, pepperoni ',
+                cookingTime: 25,
+            },
         ],
-        bgcolor: "#1F509A",
+        bgcolor: "#B98B57",
     },
 ];
 
-//test
+

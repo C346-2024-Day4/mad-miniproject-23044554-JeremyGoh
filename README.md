@@ -1,1 +1,30 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/pKaCH46a)
+# Hello this is my app, 
+🍴 Recipe Manager
+Recipe Manager is a React Native app designed for cooking enthusiasts to manage and organize recipes effortlessly. With a clean and intuitive interface, this app allows users to add, edit, and view recipes, as well as calculate the total cooking time for all recipes. It's a perfect companion for anyone who loves cooking and wants to stay organized in the kitchen!
+
+
+ 
+-----------
+ 
+## What is this app about?
+📱 Features
+View Recipes: Browse through a categorized list of recipes with details such as name, ingredients, and cooking time.
+Add Recipes: Add new recipes with details like name, ingredients, and cooking time.
+Edit Recipes: Modify existing recipes and save updates instantly.
+Calculate Total Cooking Time: Calculate the combined cooking time for all recipes, displayed in hours and minutes.
+Interactive UI: User-friendly design with a seamless navigation experience.
+ 
+### Notable features of the app
+ 
+ 
+-----------
+ 
+Screenshots of the app:
+ 
+![Screenshot 1](./docs/placeholder.jpg)
+ 
+Video walkthrough of the app:
+[https://www.youtube.com/watch?v=somevideoplaceholder](https://www.youtube.com/watch?v=0Yn-NjlbfLg)
+ 
+ 
+------------

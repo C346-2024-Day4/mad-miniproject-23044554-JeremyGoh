@@ -77,7 +77,7 @@ const Add = ({ navigation }) => {
                 {/* Back Button */}
                 <TouchableOpacity
                     style={[styles.button, styles.backButton]}
-                    onPress={() => navigation.goBack()} // Go back to the previous screen (Home)
+                    onPress={() => navigation.goBack()}
                 >
                     <Text style={styles.buttonText}>Back</Text>
                 </TouchableOpacity>
@@ -90,25 +90,25 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 20,
-        backgroundColor: '#F5EBE0', // Light cream background
+        backgroundColor: '#F5EBE0',
         paddingTop: 30,
     },
     title: {
         fontSize: 24,
         fontWeight: '800',
-        color: '#4F4A43', // Dark brown for title
+        color: '#4F4A43',
         marginBottom: 20,
         textAlign: 'center',
     },
     input: {
         height: 40,
-        borderColor: '#BDC3C7', // Lighter border
+        borderColor: '#BDC3C7',
         borderWidth: 1,
         marginBottom: 15,
         paddingHorizontal: 10,
-        borderRadius: 15, // Rounded corners
-        backgroundColor: '#FFFFFF', // White background for input
-        color: '#4F4A43', // Dark text color
+        borderRadius: 15,
+        backgroundColor: '#FFFFFF',
+        color: '#4F4A43',
     },
     inputDescription: {
         height: 100,
@@ -134,16 +134,16 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.3,
         shadowRadius: 10,
         elevation: 6,
-        marginBottom: 10, // Adds space between the buttons
+        marginBottom: 10,
     },
     submitButton: {
-        backgroundColor: '#B98B57', // Muted gold color
+        backgroundColor: '#B98B57',
     },
     backButton: {
-        backgroundColor: '#B98B57', // Lighter muted gold for back button
+        backgroundColor: '#B98B57',
     },
     buttonText: {
-        color: '#F5EBE0', // Light text color
+        color: '#F5EBE0',
         fontSize: 18,
         fontWeight: '600',
     },

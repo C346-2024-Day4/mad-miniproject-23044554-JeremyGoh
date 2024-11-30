@@ -141,7 +141,7 @@ const Edit = ({ route, navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F5EBE0', // Matching background from Home screen
+        backgroundColor: '#F5EBE0',
         paddingTop: 30,
     },
     scrollContainer: {
@@ -151,22 +151,22 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 24,
         fontWeight: '800',
-        color: '#4F4A43', // Dark brown for title
+        color: '#4F4A43',
         textAlign: 'center',
         marginBottom: 20,
     },
     label: {
         fontSize: 18,
-        color: '#4F4A43', // Dark brown for labels
+        color: '#4F4A43',
         marginBottom: 5,
     },
     input: {
         height: 40,
-        borderColor: '#BDC3C7', // Lighter border for inputs
+        borderColor: '#BDC3C7',
         borderWidth: 1,
         paddingHorizontal: 10,
         marginBottom: 20,
-        borderRadius: 15, // Rounded corners for input fields
+        borderRadius: 15,
         backgroundColor: '#FFFFFF',
     },
     inputDescription: {
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         marginBottom: 15,
         paddingHorizontal: 10,
-        borderRadius: 15, // Rounded corners for input fields
+        borderRadius: 15,
         backgroundColor: '#FFFFFF',
     },
     imageStyle: {
@@ -183,19 +183,19 @@ const styles = StyleSheet.create({
         height: 200,
         marginVertical: 20,
         alignSelf: 'center',
-        borderRadius: 15, // Rounded corners for the image
+        borderRadius: 15,
     },
     buttonContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         flexWrap: 'wrap',
-        marginBottom: 30, // Adds space between buttons
+        marginBottom: 30,
     },
     button: {
         width: '45%',
         marginHorizontal: 5,
         paddingVertical: 10,
-        borderRadius: 14, // Rounded button corners
+        borderRadius: 14,
         alignItems: 'center',
         justifyContent: 'center',
         shadowColor: '#000',
@@ -205,10 +205,10 @@ const styles = StyleSheet.create({
         elevation: 6,
     },
     saveButton: {
-        backgroundColor: '#B98B57', // Matching muted gold
+        backgroundColor: '#B98B57',
     },
     deleteButton: {
-        backgroundColor: '#E74C3C', // Red for delete
+        backgroundColor: '#E74C3C',
     },
     backButton: {
         width: '100%',
@@ -221,12 +221,12 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.3,
         shadowRadius: 10,
         elevation: 6,
-        marginBottom: 20, // Adds space between the buttons
+        marginBottom: 20,
         marginTop: 20,
-        backgroundColor: '#B98B57', // Blue for back button
+        backgroundColor: '#B98B57',
     },
     buttonText: {
-        color: '#F5EBE0', // Light cream text
+        color: '#F5EBE0',
         fontSize: 18,
         fontWeight: '600',
     },

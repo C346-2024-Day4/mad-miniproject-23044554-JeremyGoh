@@ -2,12 +2,12 @@
 
 -----------
  
-📱 Features
-View Recipes: Browse through a categorized list of recipes with details such as name, ingredients, and cooking time.
-Add Recipes: Add new recipes with details like name, ingredients, and cooking time.
-Edit Recipes: Modify existing recipes and save updates instantly.
-Calculate Total Cooking Time: Calculate the combined cooking time for all recipes, displayed in hours and minutes.
-Interactive UI: User-friendly design with a seamless navigation experience.
+📱 Features: <br>
+View Recipes: Browse through a categorized list of recipes with details such as name, ingredients, and cooking time.<br>
+Add Recipes: Add new recipes with details like name, ingredients, and cooking time.<br>
+Edit Recipes: Modify existing recipes and save updates instantly.<br>
+Calculate Total Cooking Time: Calculate the combined cooking time for all recipes, displayed in hours and minutes.<br>
+Interactive UI: User-friendly design with a seamless navigation experience.<br>
  
   
 -----------

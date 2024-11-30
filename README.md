@@ -14,10 +14,12 @@ Interactive UI: User-friendly design with a seamless navigation experience.<br>
  
 Screenshots of the app:
  
-![Screenshot 1](./docs/placeholder.jpg)
+![Screenshot 1](./desktop/placeholder.jpg)
+
+-----------
  
 Video walkthrough of the app:
-[https://www.youtube.com/watch?v=somevideoplaceholder](https://www.youtube.com/watch?v=0Yn-NjlbfLg)
+[https://www.youtube.com/watch?v=0Yn-NjlbfLg]
  
  
 ------------

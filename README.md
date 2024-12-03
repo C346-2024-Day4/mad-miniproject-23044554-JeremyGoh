@@ -18,6 +18,7 @@ Interactive UI: User-friendly design with a seamless navigation experience.<br>
 Screenshots of the app:
  
 ![Screenshot 1](./img1.png)<br>
+![Screenshot 1](./img5.png)<br>
 ![Screenshot 2](./img2.png)<br>
 ![Screenshot 3](./img3.png)<br>
 ![Screenshot 4](./img4.png)<br>

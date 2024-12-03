@@ -1,16 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
+import React from 'react';
 import { StyleSheet, Text, View, Image, SectionList, TouchableOpacity, Alert } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons'; // Import MaterialIcons set
 import { datasource } from './Data.js';
 
 const renderSection = ({ section }) => (
-    <View style={[styles.headerContainer, { backgroundColor: section.bgcolor }]} >
+    <View style={[styles.headerContainer, { backgroundColor: section.bgcolor }]}>
         <Text style={styles.headerText}>{section.title}</Text>
     </View>
 );
 
 const Home = ({ navigation }) => {
-
     const calculateTotalCookingTime = () => {
         let total = 0;
         datasource.forEach(section => {
@@ -62,22 +62,29 @@ const Home = ({ navigation }) => {
                 sections={datasource}
                 renderItem={renderItem}
                 renderSectionHeader={renderSection}
-                contentContainerStyle={{ paddingBottom: 150 }}
+                contentContainerStyle={{ paddingBottom: 20 }}
+                ListFooterComponent={
+                    <View style={styles.footer}>
+                        {/* Add Item Button */}
+                        <TouchableOpacity
+                            style={[styles.buttonContainer, styles.footerButton]}
+                            onPress={() => navigation.navigate("Add")}
+                        >
+                            <Icon name="add" size={24} color="#F5EBE0" style={styles.iconStyle} />
+                            <Text style={styles.buttonText}>Add Item</Text>
+                        </TouchableOpacity>
+
+                        {/* Calculate Time Button */}
+                        <TouchableOpacity
+                            style={[styles.buttonContainer, styles.footerButton]}
+                            onPress={calculateTotalCookingTime}
+                        >
+                            <Icon name="timer" size={24} color="#F5EBE0" style={styles.iconStyle} />
+                            <Text style={styles.buttonText}>Calculate Total Cooking Time</Text>
+                        </TouchableOpacity>
+                    </View>
+                }
             />
-
-            <TouchableOpacity
-                style={[styles.buttonContainer, { bottom: 80 }]}
-                onPress={() => navigation.navigate("Add")}
-            >
-                <Text style={styles.buttonText}>Add Item</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-                style={[styles.buttonContainer, { bottom: 20 }]}
-                onPress={calculateTotalCookingTime}
-            >
-                <Text style={styles.buttonText}>Calculate Total Cooking Time</Text>
-            </TouchableOpacity>
         </View>
     );
 };
@@ -86,23 +93,33 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#F5EBE0',
-        paddingTop: 30,
     },
     buttonContainer: {
-        position: 'absolute',
-        left: 20,
-        right: 20,
+        flexDirection: 'row', // To align icon and text horizontally
+        alignItems: 'center',
         backgroundColor: '#B98B57',
         borderRadius: 14,
         paddingVertical: 15,
-        alignItems: 'center',
+        paddingHorizontal: 20,
         justifyContent: 'center',
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 5 },
         shadowOpacity: 0.3,
         shadowRadius: 10,
         elevation: 5,
-        zIndex: 1,
+        marginVertical: 10,
+        width: '90%',
+        alignSelf: 'center',
+    },
+    footer: {
+        paddingVertical: 20,
+        backgroundColor: '#F5EBE0',
+    },
+    footerButton: {
+        marginBottom: 10,
+    },
+    iconStyle: {
+        marginRight: 10, // Spacing between icon and text
     },
     buttonText: {
         fontSize: 18,
@@ -178,4 +195,3 @@ const styles = StyleSheet.create({
 });
 
 export default Home;
-

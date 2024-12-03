@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#F5EBE0',
+        paddingTop: 30,
     },
     buttonContainer: {
         flexDirection: 'row', // To align icon and text horizontally

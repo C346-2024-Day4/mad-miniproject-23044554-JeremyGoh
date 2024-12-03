@@ -25,7 +25,7 @@ Screenshots of the app:
 -----------
  
 Video walkthrough of the app:
-[https://www.youtube.com/watch?v=0Yn-NjlbfLg]
+[https://youtu.be/HRz47cwT0pE]
  
  
 ------------

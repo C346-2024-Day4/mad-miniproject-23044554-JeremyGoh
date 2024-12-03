@@ -17,11 +17,11 @@ Interactive UI: User-friendly design with a seamless navigation experience.<br>
  
 Screenshots of the app:
  
-![Screenshot 1](./img1.png)<br>
-![Screenshot 1](./img5.png)<br>
-![Screenshot 2](./img2.png)<br>
-![Screenshot 3](./img3.png)<br>
-![Screenshot 4](./img4.png)<br>
+<img src="./img1.png" alt="Screenshot 1" width="300">
+<img src="./img5.png" alt="Screenshot 5" width="300">
+<img src="./img2.png" alt="Screenshot 2" width="300">
+<img src="./img3.png" alt="Screenshot 3" width="300">
+<img src="./img4.png" alt="Screenshot 4" width="300">
 
 -----------
  
